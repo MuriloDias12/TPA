@@ -13,9 +13,25 @@ public class ListaEncadeada<T> implements Icolecao<T> {
         this.quantidade = 0;
     }
 
+
     @Override
     public void adicionar(T novoValor) {
 
+        No<T> novoNo = new No<>(novoValor);
+
+        if (inicio == null) {
+            inicio = novoNo;
+        } else {
+            No<T> atual = inicio;
+
+            while (atual.proximo != null) {
+                atual = atual.proximo;
+            }
+
+            atual.proximo = novoNo;
+        }
+
+        quantidade++;
     }
 
     @Override
