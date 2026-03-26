@@ -24,4 +24,5 @@ public class Main {
         boolean removidoNaoExiste = lista.remover("X");
         System.out.println("Remover 'X' (não existe) -> " + removidoNaoExiste + " (quantidade: " + lista.quantidadeNos() + ")");
     }
+        
 }
