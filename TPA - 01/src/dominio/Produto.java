@@ -11,9 +11,18 @@ public class Produto {
         this.preco = preco;
     }
 
-    public int getId() { return id; }
-    public String getNome() { return nome; }
-    public double getPreco() { return preco; }
+    public int getId()
+     { return id; 
+
+     }
+    public String getNome() 
+    { return nome;
+
+     }
+    public double getPreco()
+     { return preco; 
+
+     }
 
     @Override
     public boolean equals(Object obj) {

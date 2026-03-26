@@ -55,7 +55,9 @@ public class ListaEncadeada<T> implements Icolecao<T> {
         No<T> anterior = null;
 
         while (atual != null) {
-            if ((atual.valor == null && valor == null) || (atual.valor != null && atual.valor.equals(valor))) {
+            if ((atual.valor == null && valor == null) || 
+            (atual.valor != null && atual.valor.equals(valor)))
+             {
                 if (anterior == null) {
                     inicio = atual.proximo;
                 } else {
