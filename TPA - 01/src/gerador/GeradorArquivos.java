@@ -7,14 +7,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class GeradorArquivos {
-    private static final String NOME_ARQUIVO = "produtos_80k.txt";
-    private static final int NUM_REGISTROS =80000;
+    private static final String[] NOME_ARQUIVOS = {"produtos_10k.txt", "produtos_20k.txt", "produtos_40k.txt", "produtos_80k.txt", "produtos_200k.txt", "produtos_400k.txt"};
+    private static final int[] QUANTIDADES = {10000, 20000, 40000, 80000};
 
     public static void main(String[] args) throws IOException {
-        gerarArquivo(NOME_ARQUIVO, NUM_REGISTROS);
-        // rode 3 vezes mudando o nome e quantidade:
-        // produtos_200k.txt -> 200000
-        // produtos_400k.txt -> 400000
+        //vai gerar os arquivos de produtos com as quantidades especificadas rodando automaticamente as 4 vezes
+        for (int i = 0; i < QUANTIDADES.length; i++) {
+            gerarArquivo(NOME_ARQUIVOS[i], QUANTIDADES[i]);
+        }
     }
 
     private static void gerarArquivo(String nomeArquivo, int quantidade) throws IOException {

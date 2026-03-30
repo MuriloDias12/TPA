@@ -69,9 +69,15 @@ public class AnaliseTempo {
     }
 
     public static void main(String[] args) throws IOException {
-        analisar("produtos_10k.txt");
-        analisar("produtos_20k.txt");
-        analisar("produtos_40k.txt");
-        analisar("produtos_80k.txt");
+        String[] arquivos = {
+            "produtos_10k.txt",
+            "produtos_20k.txt",
+            "produtos_40k.txt",
+            "produtos_80k.txt"
+        };
+
+        for (String arquivo : arquivos) {
+            analisar(arquivo);
+        }
     }
 }
